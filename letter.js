@@ -9,3 +9,5 @@ function Letter(let){
 		}
 	}
 }
+
+module.exports = Letter;
