@@ -13,4 +13,21 @@ var game = {
 		startingWord.getLets(); // not fully understanding this part
 		this.keepPromptingUser(); // not fully understanding this part
 	}
+	this.keepPromptingUser = function () {
+		var self = this;
+		prompt.get(["guessLetter"], function (err, result){
+			console.log("The letter or pace you guessed is " + result.guessLetter);
+			var findHowManyOfUserGuess = currentWrd.checkIfLetterFound(result.guessLetter); // not fully understanding this part
+			if (findHowManyOfUserGuess === 0){
+				console.log("You guessed incorrectly~!");
+				self.guessesRemaining --;
+			} else {
+					console.log("You guessed right~!");
+				if (startingWord.didWeFindTheWord() === true){
+					console.log("You Won~!");
+					return 1;
+				} 
+			}
+		});
+	}
 }
