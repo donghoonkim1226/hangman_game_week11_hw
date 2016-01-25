@@ -5,6 +5,19 @@ function Word(wrd){
 	this.lets = [];
 	this.found = false;
 	this.getLets = function (){
-		for(i=0; i <= word.length; i++)
+		for (var i = 0; i <  this.word.length; i++){
+			letter = this.word.charAt(i); // not fully understanding this part.
+			var let = new Letter(letter); // not fully understanding this part.
+			this.lets.push(let); // not fully understanding this part.
+		}
 	}
+	this.checkIfLetterFound = function (guessLetter) {
+
+	}
+
+
+
+
+
+
 }
