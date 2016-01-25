@@ -21,10 +21,20 @@ function Word(wrd){
 		}
 		return whatToReturn; // not fully understanding this part.
 	}
+	this.didWeFindTheWord = function (){ // not fully understanding this part. Why are we calling anonymous function?
+		if (this.lets.every(function(curLet){ // not fully understanding this part. Confused by the syntax. 
+			return curLet.appear === true // not fully understanding this part. Confused by the syntax. 
+		}) === true){ // not fully understanding this part. Confused by the syntax. 
+			return true; // not fully understanding this part. Confused by the syntax. 
+		} else { // not fully understanding this part. Confused by the syntax. 
 
-
-
-
-
-
+		}
+	}
+	this.wordRender = function (){
+		var str = "";
+		for (var i = 0; i < this.lets.length; i++){
+			str += this.lets[i].letterRender(this.lets[i])
+		}
+		return str;
+	}
 }
