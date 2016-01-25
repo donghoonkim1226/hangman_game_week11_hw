@@ -23,7 +23,7 @@ var game = {
 				self.guessesRemaining --;
 			} else {
 					console.log("You guessed right~!");
-				if (startingWord.didWeFindTheWord() === true){
+				if (startingWord.didWeFindTheWord() === true){ // not fully understanding this part
 					console.log("You Won~!");
 					return 1;
 				} 
